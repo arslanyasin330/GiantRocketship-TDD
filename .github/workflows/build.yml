@@ -20,9 +20,10 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
+          npx playwright install
 
-      - name: Run tests on cypress
-        run: npm run test
+      - name: Run tests on Playwright
+        run: npm run tests:allure
 
       - name: Get Allure history
         uses: actions/checkout@v3
